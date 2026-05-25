@@ -1,0 +1,348 @@
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #1e1b4b, #0f172a, #000000);
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 280px;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Univy Core Profile Container --- */
+.profile-univy-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Univy Header Section --- */
+.univy-profile-header {
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-top {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.avatar-gradient-border {
+  padding: 4px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+}
+
+.profile-avatar-xl {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  border: 4px solid #0f172a;
+}
+
+.profile-info-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.username-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-display-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-profile-btn-premium {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #a78bfa;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-profile-btn-premium:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+.follow-btn-premium {
+  background: white;
+  border: none;
+  color: #0f172a;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.follow-btn-premium.following {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  box-shadow: none;
+}
+
+.follow-btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.follow-btn-premium.following:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.profile-social-stats {
+  display: flex;
+  gap: 30px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.stat-num {
+  color: #f8fafc;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.user-bio-univy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.full-name-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+.bio-description {
+    color: #94a3b8;
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.bio-contact {
+    font-size: 0.85rem;
+    color: #a78bfa;
+    margin: 0;
+}
+
+/* --- Section Heading --- */
+.posts-section-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.section-title-modern {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.active-line {
+  width: 60px;
+  height: 2px;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #a78bfa;
+}
+
+/* --- Univy Posts Grid --- */
+.univy-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.univy-grid-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.univy-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.univy-grid-item:hover .univy-grid-img {
+  transform: scale(1.1);
+}
+
+.univy-grid-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(124, 58, 237, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.univy-grid-item:hover .univy-grid-hover {
+  opacity: 1;
+}
+
+.hover-stats {
+  display: flex;
+  gap: 15px;
+  font-weight: 800;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* --- Empty/Loading --- */
+.state-message, .empty-state {
+  padding: 80px 0;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* --- Modal Styles --- */
+.post-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: #0f172a;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.modal-close-x {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2100;
+  font-weight: 700;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .content-area {
+    margin-left: 100px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .content-area {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .univy-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

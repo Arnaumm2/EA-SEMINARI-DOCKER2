@@ -1,0 +1,79 @@
+/* Updated Search Section to layout children horizontally */
+.search-section-premium {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between the search bar and filter button */
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* Make the search box grow to fill available space */
+.search-box-wrapper {
+    position: relative;
+    display: flex;
+    flex: 1; /* This ensures the search bar takes up the remaining width */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 6px 6px 6px 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.search-box-wrapper:focus-within {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.15);
+}
+
+.search-icon-inside {
+    color: #94a3b8;
+}
+
+.search-input-premium {
+    flex: 1;
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.search-input-premium::placeholder {
+    color: #475569;
+}
+
+/* Ensure the button doesn't shrink and matches the height */
+.filter-btn-premium {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    height: 54px; /* Matches the approximate height of the search bar */
+    padding: 0 28px;
+    border-radius: 16px;
+    font-weight: 700;
+    white-space: nowrap; /* Prevents text from wrapping */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn-premium:hover {
+    background: #8b5cf6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: fadeIn 0.5s ease-out;
+    width: 100%;
+    padding-bottom: 50px;
+    align-items: stretch; 
+}
